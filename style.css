@@ -271,37 +271,31 @@ footer {
   cursor: pointer;
 }
 
-/* ===== SITE HEADER ===== */
-.site-header {
+/* ===== HEADER / LOGO FIX ===== */
+.brand-bar {
   background: #ffffff;
+  padding: 14px 30px;
   border-bottom: 1px solid #eee;
 }
 
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 14px 20px;
-}
-
-.logo-box {
+.brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-/* LOGO IMAGE */
-.logo-box img {
-  width: 48px;      /* PERFECT SIZE */
-  height: 48px;
+/* 🔥 LOGO SIZE INCREASED */
+.brand img {
+  width: 80px;       /* 👈 yahan size control karo */
+  height: 80px;
   object-fit: contain;
   display: block;
 }
 
-/* BRAND NAME */
-.brand-name {
-  font-size: 22px;
+/* BRAND TEXT */
+.brand span {
+  font-size: 26px;
   font-weight: 600;
   color: #4a2f1b;
   letter-spacing: 0.5px;
 }
-
