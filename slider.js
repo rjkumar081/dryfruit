@@ -1,18 +1,34 @@
 let slideIndex = 0;
-showSlides();
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slides");
+function showSlide(n) {
+  slides.forEach(slide => slide.style.display = "none");
+  dots.forEach(dot => dot.classList.remove("active"));
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+  slideIndex = (n + slides.length) % slides.length;
 
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-
-  slides[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 4000); // 4 seconds
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].classList.add("active");
 }
+
+/* Arrows */
+document.querySelector(".prev").addEventListener("click", () => {
+  showSlide(slideIndex - 1);
+});
+document.querySelector(".next").addEventListener("click", () => {
+  showSlide(slideIndex + 1);
+});
+
+/* Dots */
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => showSlide(i));
+});
+
+/* Auto play */
+setInterval(() => {
+  showSlide(slideIndex + 1);
+}, 5000);
+
+/* Init */
+showSlide(0);
