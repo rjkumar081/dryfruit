@@ -313,3 +313,19 @@ footer {
     font-size: 32px;
   }
 }
+/* =========================
+   PAGE LOAD ANIMATION
+   ========================= */
+.page-load {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: pageFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
