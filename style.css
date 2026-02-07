@@ -299,3 +299,22 @@ footer {
   color: #4a2f1b;
   letter-spacing: 0.5px;
 }
+@media(max-width: 768px) {
+  .brand img {
+    width: 60px;
+    height: 60px;
+  }
+  .brand span {
+    font-size: 20px;
+  }
+}
+@media(max-width: 768px) {
+  .brand img {
+    width: 60px;
+    height: 60px;
+  }
+  .brand span {
+    font-size: 20px;
+  }
+}
+
