@@ -329,3 +329,20 @@ footer {
   }
 }
 
+/* =========================
+   HEADER SHRINK ON SCROLL
+   ========================= */
+.brand-bar.shrink {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+.brand-bar.shrink .brand img {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+.brand-bar,
+.brand img {
+  transition: height 0.3s ease;
+}
