@@ -237,3 +237,36 @@ footer {
   font-size: 14px;
   color: #6b4a32;
 }
+
+/* BULK ENQUIRY */
+.bulk-enquiry {
+  padding: 70px 40px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.enquiry-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.enquiry-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.enquiry-form button {
+  border: none;
+  cursor: pointer;
+}
