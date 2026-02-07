@@ -9,15 +9,21 @@ body {
 }
 
 /* =========================
-   HEADER / LOGO (FINAL)
+   HEADER / LOGO (EDGE-TO-EDGE FINAL)
    ========================= */
 .brand-bar {
   background: #ffffff;
   border-bottom: 1px solid #eee;
-  padding: 8px 28px;
+
+  height: 80px;          /* 👈 logo ke equal height */
+  padding: 0 28px;       /* 👈 top-bottom ZERO */
 
   display: flex;
   align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .brand {
@@ -26,19 +32,20 @@ body {
   gap: 14px;
 }
 
+/* LOGO – FULL HEIGHT */
 .brand img {
-  width: 80px;
-  height: 80px;
+  height: 80px;          /* 👈 edge to edge */
+  width: auto;
   object-fit: contain;
   display: block;
 }
 
+/* BRAND NAME */
 .brand span {
   font-size: 24px;
   font-weight: 600;
   color: #4a2f1b;
-  letter-spacing: 0.4px;
-  line-height: 1.1;
+  line-height: 1;        /* 👈 extra gap remove */
 }
 
 /* =========================
@@ -284,11 +291,11 @@ footer {
 @media (max-width: 768px) {
 
   .brand-bar {
-    padding: 6px 18px;
+    height: 60px;
+    padding: 0 16px;
   }
 
   .brand img {
-    width: 60px;
     height: 60px;
   }
 
