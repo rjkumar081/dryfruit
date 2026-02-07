@@ -69,18 +69,17 @@ body {
 }
 
 /* =========================
-   HERO OVERLAY (NO OVERLAP)
+   HERO OVERLAY – FIXED
    ========================= */
 .hero-overlay {
   position: absolute;
   inset: 0;
 
-  /* Soft luxury gradient */
   background: linear-gradient(
     to right,
     rgba(247,243,237,0.92) 0%,
     rgba(247,243,237,0.75) 45%,
-    rgba(247,243,237,0.2) 70%,
+    rgba(247,243,237,0.25) 70%,
     rgba(247,243,237,0) 100%
   );
 
@@ -88,46 +87,50 @@ body {
   align-items: center;
 }
 
-/* CONTENT BOX – SAFE AREA */
-.hero-overlay > * {
-  max-width: 520px;     /* 👈 yahi overlap rokta hai */
-}
-
-.hero-overlay {
+/* SAFE CONTENT BOX */
+.hero-content {
+  max-width: 520px;
   padding-left: 80px;
 }
 
-.hero-overlay h1 {
+/* TEXT */
+.hero-content h1 {
   font-size: 52px;
   margin-bottom: 10px;
 }
 
-.hero-overlay p {
+.hero-content p {
   font-size: 18px;
   margin-bottom: 18px;
 }
 
-.hero-overlay ul {
+.hero-content ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-.hero-overlay ul li {
+.hero-content ul li {
   font-size: 16px;
   margin: 6px 0;
 }
 @media (max-width: 768px) {
   .hero-overlay {
-    padding: 20px;
     justify-content: center;
     text-align: center;
   }
 
-  .hero-overlay > * {
+  .hero-content {
+    padding-left: 0;
     max-width: 100%;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
   }
 }
+
 
 /* =========================
    BUTTON
