@@ -270,3 +270,38 @@ footer {
   border: none;
   cursor: pointer;
 }
+
+/* ===== SITE HEADER ===== */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* LOGO IMAGE */
+.logo-box img {
+  width: 48px;      /* PERFECT SIZE */
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+/* BRAND NAME */
+.brand-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4a2f1b;
+  letter-spacing: 0.5px;
+}
+
