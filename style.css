@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background: #0f0f0f;
-  color: #f5f5f5;
+  background: #f7f3ed;
+  color: #4a2f1b;
 }
 
 /* ===== HERO SLIDER ===== */
@@ -23,11 +23,16 @@ body {
   display: none;
 }
 
-/* ===== OVERLAY ===== */
+/* ===== OVERLAY (SOFT, NOT DARK) ===== */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: linear-gradient(
+    to right,
+    rgba(247,243,237,0.85),
+    rgba(247,243,237,0.3),
+    rgba(247,243,237,0.05)
+  );
 
   display: flex;
   flex-direction: column;
@@ -36,117 +41,135 @@ body {
 }
 
 .hero-overlay h1 {
-  font-size: 54px;
-  color: #d4af37;
-  letter-spacing: 2px;
+  font-size: 52px;
+  color: #4a2f1b;
   margin-bottom: 10px;
 }
 
 .hero-overlay p {
   font-size: 18px;
-  color: #e6e6e6;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .hero-overlay ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .hero-overlay ul li {
   font-size: 16px;
-  margin: 8px 0;
-  color: #f5f5f5;
+  margin: 6px 0;
 }
 
-/* ===== GOLD BUTTON ===== */
+/* ===== BUTTON ===== */
 .btn {
-  background: linear-gradient(135deg, #d4af37, #b8962e);
-  color: #0f0f0f;
-  padding: 14px 32px;
+  background: #6b8e23;
+  color: #fff;
+  padding: 12px 28px;
   width: fit-content;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  transition: 0.3s ease;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: linear-gradient(135deg, #b8962e, #d4af37);
-  transform: translateY(-2px);
-}
-
-/* Fade animation */
-.fade {
-  animation: fadeEffect 1.5s;
-}
-
-@keyframes fadeEffect {
-  from {opacity: .3}
-  to {opacity: 1}
+  background: #58761c;
 }
 
 /* ===== PRODUCTS ===== */
 .products {
   padding: 70px 40px;
-  background: #151515;
+  background: #ffffff;
   text-align: center;
 }
 
 .products h2 {
-  font-size: 36px;
-  color: #d4af37;
-  letter-spacing: 2px;
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 
+.products .subtext {
+  color: #7a5a43;
+  margin-bottom: 30px;
+}
+
+/* ===== PRODUCT GRID ===== */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
   gap: 30px;
-  margin-top: 50px;
 }
 
-/* ===== PRODUCT CARD ===== */
 .card {
-  background: #0f0f0f;
-  border: 1px solid rgba(212,175,55,0.3);
+  background: #fff;
   border-radius: 14px;
-  padding: 20px;
-  transition: 0.3s ease;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(212,175,55,0.15);
 }
 
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  border-radius: 12px;
 }
 
 .card h3 {
-  color: #d4af37;
-  margin-bottom: 8px;
+  margin-top: 15px;
 }
 
 .card p {
-  color: #e6e6e6;
-  font-size: 16px;
+  color: #6b4a32;
+}
+
+/* ===== CONNECT SECTION ===== */
+.connect {
+  padding: 70px 40px;
+  background: #f7f3ed;
+  text-align: center;
+}
+
+.connect h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.connect p {
+  color: #6b4a32;
+  margin-bottom: 25px;
+}
+
+.connect-box {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.connect-card {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 14px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.connect-card h4 {
+  margin-bottom: 8px;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #0b0b0b;
-  color: #aaa;
+  background: #4a2f1b;
+  color: #f7f3ed;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  padding: 25px;
 }
 
 /* ===== MOBILE ===== */
@@ -158,10 +181,6 @@ footer {
   }
 
   .hero-overlay h1 {
-    font-size: 34px;
-  }
-
-  .products h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
