@@ -69,21 +69,31 @@ body {
 }
 
 /* =========================
-   HERO OVERLAY
+   HERO OVERLAY (NO OVERLAP)
    ========================= */
 .hero-overlay {
   position: absolute;
   inset: 0;
+
+  /* Soft luxury gradient */
   background: linear-gradient(
     to right,
-    rgba(247,243,237,0.85),
-    rgba(247,243,237,0.35),
-    rgba(247,243,237,0.05)
+    rgba(247,243,237,0.92) 0%,
+    rgba(247,243,237,0.75) 45%,
+    rgba(247,243,237,0.2) 70%,
+    rgba(247,243,237,0) 100%
   );
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENT BOX – SAFE AREA */
+.hero-overlay > * {
+  max-width: 520px;     /* 👈 yahi overlap rokta hai */
+}
+
+.hero-overlay {
   padding-left: 80px;
 }
 
@@ -94,17 +104,29 @@ body {
 
 .hero-overlay p {
   font-size: 18px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .hero-overlay ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 18px;
 }
 
 .hero-overlay ul li {
   font-size: 16px;
   margin: 6px 0;
+}
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-overlay > * {
+    max-width: 100%;
+  }
 }
 
 /* =========================
