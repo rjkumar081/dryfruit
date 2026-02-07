@@ -3,22 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Fresh Dry Fruits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-text">
+<!-- ===== HERO SLIDER ===== -->
+<header class="hero-slider">
+
+  <div class="slide fade">
+    <img src="images/banner1.jpg">
+  </div>
+  <div class="slide fade">
+    <img src="images/banner2.jpg">
+  </div>
+  <div class="slide fade">
+    <img src="images/banner3.jpg">
+  </div>
+
+  <div class="hero-overlay">
     <h1>Fresh Dry Fruits</h1>
     <p>Premium • Fresh • Hygienically Packed</p>
-    <a href="https://wa.me/91XXXXXXXXXX" class="btn">Order on WhatsApp</a>
+
+    <ul>
+      <li>✔ Fresh Packing</li>
+      <li>✔ Best Prices</li>
+      <li>✔ Pan India Delivery</li>
+    </ul>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn">
+      Order on WhatsApp
+    </a>
   </div>
+
 </header>
 
+<!-- ===== PRODUCTS ===== -->
 <section class="products">
   <h2>Our Products</h2>
 
   <div class="product-grid">
+
     <div class="card">
       <img src="images/badam.jpg">
       <h3>Almonds (Badam)</h3>
@@ -37,22 +62,13 @@
       <p>₹159 / 250g</p>
     </div>
 
-    <div class="card">
-      <img src="images/combo.jpg">
-      <h3>Mix Dry Fruits</h3>
-      <p>₹499 Combo Pack</p>
-    </div>
   </div>
-</section>
-
-<section class="why">
-  <h2>Why Choose Us</h2>
-  <p>✔ Premium Quality &nbsp; ✔ Hygienic Packing &nbsp; ✔ Best Price</p>
 </section>
 
 <footer>
   <p>© 2026 Fresh Dry Fruits | Delhi, India</p>
 </footer>
 
+<script src="slider.js"></script>
 </body>
 </html>
