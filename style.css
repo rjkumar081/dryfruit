@@ -286,8 +286,8 @@ footer {
 
 /* 🔥 LOGO SIZE INCREASED */
 .brand img {
-  width: 80px;       /* 👈 yahan size control karo */
-  height: 80px;
+  width: 100px;       /* 👈 yahan size control karo */
+  height: 100px;
   object-fit: contain;
   display: block;
 }
