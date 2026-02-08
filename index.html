@@ -1,172 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fresh Dry Fruits | Premium Dry Fruits & Gift Hampers</title>
+<meta charset="UTF-8">
+<title>Fresh Dry Fruits | Premium Dry Fruits Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Buy premium quality dry fruits & luxury gift hampers online. Fresh, hygienically packed. Pan India delivery from Delhi.">
-  <meta name="keywords" content="dry fruits online, premium dry fruits, gift hampers, buy dry fruits Delhi">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Buy premium dry fruits & gift hampers online. Fresh, hygienic, trusted seller. Pan India delivery.">
+<meta name="robots" content="index, follow">
 
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXX');
+</script>
 </head>
 
-<body class="page-load">
+<body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="brand-bar">
-  <div class="container brand">
-    <img src="images/logo.png" alt="Fresh Dry Fruits">
+  <div class="brand">
+    <img src="images/logo.png">
     <span>Fresh Dry Fruits</span>
   </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav class="menu" id="menu">
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a class="cart">🛒 Cart</a>
+  </nav>
 </header>
 
-<!-- ===== HERO SLIDER ===== -->
-<section class="hero slider">
+<!-- SLIDER -->
+<section class="hero-slider">
+  <div class="slide active"><img src="images/banner1.jpg"></div>
+  <div class="slide"><img src="images/banner2.jpg"></div>
+  <div class="slide"><img src="images/banner3.jpg"></div>
 
-  <div class="slide active">
-    <img src="images/banner1.jpg">
-  </div>
-
-  <div class="slide">
-    <img src="images/banner2.jpg">
-  </div>
-
-  <div class="slide">
-    <img src="images/banner3.jpg">
-  </div>
-
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <h1>Premium Dry Fruits</h1>
-      <p>Fresh • Hygienic • Trusted</p>
-
-      <ul>
-        <li>✔ Fresh Packing</li>
-        <li>✔ Best Prices</li>
-        <li>✔ Pan India Delivery</li>
-      </ul>
-
-      <a href="https://wa.me/91XXXXXXXXXX" class="btn">Order on WhatsApp</a>
-    </div>
-  </div>
-
-</section>
-
-<!-- ===== PRODUCTS ===== -->
-<section class="section products" id="products">
-  <h2>Our Products</h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/badam.jpg">
-      <h3>Almonds (Badam)</h3>
-      <p>₹299 / 250g</p>
-    </div>
-
-    <div class="card">
-      <img src="images/kaju.jpg">
-      <h3>Cashews (Kaju)</h3>
-      <p>₹349 / 250g</p>
-    </div>
-
-    <div class="card">
-      <img src="images/kishmish.jpg">
-      <h3>Raisins (Kishmish)</h3>
-      <p>₹159 / 250g</p>
-    </div>
+  <div class="hero-content">
+    <h1>Premium Dry Fruits</h1>
+    <p>Fresh • Hygienic • Trusted</p>
+    <ul>
+      <li>✔ Fresh Packing</li>
+      <li>✔ Best Prices</li>
+      <li>✔ Pan India Delivery</li>
+    </ul>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
   </div>
 </section>
 
-<!-- ===== GIFT HAMPERS ===== -->
-<section class="section gift">
-  <h2>Premium Gift Hampers</h2>
-  <p class="sub">Perfect for festivals & weddings</p>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/hamper1.jpg">
-      <h3>Classic Box</h3>
-      <p>₹999</p>
-    </div>
-
-    <div class="card">
-      <img src="images/hamper2.jpg">
-      <h3>Royal Hamper</h3>
-      <p>₹1,799</p>
-    </div>
-
-    <div class="card">
-      <img src="images/hamper3.jpg">
-      <h3>Wedding Special</h3>
-      <p>₹2,499</p>
-    </div>
-  </div>
+<!-- PRODUCTS -->
+<section class="products" id="products">
+<h2>Our Products</h2>
+<div class="product-grid">
+  <div class="card"><img src="images/badam.jpg"><h3>Almonds</h3><p>₹299 / 250g</p></div>
+  <div class="card"><img src="images/kaju.jpg"><h3>Cashews</h3><p>₹349 / 250g</p></div>
+  <div class="card"><img src="images/kishmish.jpg"><h3>Raisins</h3><p>₹159 / 250g</p></div>
+</div>
 </section>
 
-<!-- ===== REVIEWS ===== -->
-<section class="section reviews">
-  <h2>Customer Reviews</h2>
-
-  <div class="grid">
-    <div class="review">⭐⭐⭐⭐⭐<p>Fresh quality & packing</p><span>Rahul – Delhi</span></div>
-    <div class="review">⭐⭐⭐⭐⭐<p>Perfect Diwali gift</p><span>Neha – Noida</span></div>
-    <div class="review">⭐⭐⭐⭐⭐<p>Very hygienic</p><span>Amit – Gurgaon</span></div>
-  </div>
+<!-- PAYU BUTTON -->
+<section class="payment">
+<h2>Pay Securely</h2>
+<form action="https://secure.payu.in/_payment" method="post">
+<input type="hidden" name="key" value="PAYU_KEY">
+<input type="hidden" name="txnid" value="TXN12345">
+<input type="hidden" name="amount" value="999">
+<input type="hidden" name="productinfo" value="Dry Fruit Hamper">
+<input type="hidden" name="firstname" value="Customer">
+<input type="hidden" name="email" value="customer@email.com">
+<input type="hidden" name="hash" value="">
+<input type="hidden" name="surl" value="thankyou.html">
+<input type="hidden" name="furl" value="thankyou.html">
+<button class="btn">Pay with PayU</button>
+</form>
 </section>
 
-<!-- ===== CONNECT ===== -->
-<section class="section connect">
-  <h2>Let’s Stay Connected</h2>
-
-  <div class="grid">
-    <div class="card small">
-      <h4>WhatsApp</h4>
-      <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat Now</a>
-    </div>
-
-    <div class="card small">
-      <h4>Instagram</h4>
-      <a href="#" class="btn">Follow</a>
-    </div>
-
-    <div class="card small">
-      <h4>Location</h4>
-      <p>Delhi, India</p>
-    </div>
-  </div>
+<!-- REVIEWS -->
+<section class="reviews">
+<h2>Customer Reviews</h2>
+<div class="review-grid">
+<div class="review">⭐⭐⭐⭐⭐<p>Fresh & premium.</p><h4>Rahul – Delhi</h4></div>
+<div class="review">⭐⭐⭐⭐⭐<p>Perfect Diwali gift.</p><h4>Neha – Noida</h4></div>
+<div class="review">⭐⭐⭐⭐⭐<p>Trusted seller.</p><h4>Sandeep – Varanasi</h4></div>
+</div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- CONTACT -->
+<section class="connect" id="contact">
+<h2>Let’s Stay Connected</h2>
+<a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="terms.html">Terms</a>
-    <a href="shipping-policy.html">Shipping</a>
-    <a href="refund-policy.html">Refund</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </div>
-  <p>© 2026 Fresh Dry Fruits | Delhi, India</p>
+<p>© 2026 Fresh Dry Fruits | Delhi, India</p>
+<div class="footer-links">
+<a href="terms.html">Terms</a>
+<a href="refund-policy.html">Refund</a>
+<a href="shipping-policy.html">Shipping</a>
+<a href="disclaimer.html">Disclaimer</a>
+</div>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+<a class="wa-float" href="https://wa.me/91XXXXXXXXXX">💬</a>
 
-<!-- SLIDER SCRIPT -->
+<script src="slider.js"></script>
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-
-setInterval(() => {
-  slides[slideIndex].classList.remove("active");
-  slideIndex = (slideIndex + 1) % slides.length;
-  slides[slideIndex].classList.add("active");
-}, 4000);
-
-window.addEventListener("scroll", () => {
-  document.querySelector(".brand-bar")
-    .classList.toggle("shrink", window.scrollY > 50);
-});
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
 </script>
 
 </body>
