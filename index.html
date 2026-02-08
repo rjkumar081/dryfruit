@@ -68,21 +68,36 @@ gtag('config', 'G-XXXXXXXX');
 </div>
 </section>
 
-<!-- PAYU BUTTON -->
-<section class="payment">
-<h2>Pay Securely</h2>
-<form action="https://secure.payu.in/_payment" method="post">
-<input type="hidden" name="key" value="PAYU_KEY">
-<input type="hidden" name="txnid" value="TXN12345">
-<input type="hidden" name="amount" value="999">
-<input type="hidden" name="productinfo" value="Dry Fruit Hamper">
-<input type="hidden" name="firstname" value="Customer">
-<input type="hidden" name="email" value="customer@email.com">
-<input type="hidden" name="hash" value="">
-<input type="hidden" name="surl" value="thankyou.html">
-<input type="hidden" name="furl" value="thankyou.html">
-<button class="btn">Pay with PayU</button>
+<form id="payuForm" action="https://secure.payu.in/_payment" method="post">
+
+  <input type="hidden" name="key" value="LIVE_MERCHANT_KEY">
+
+  <input type="hidden" name="txnid" id="txnid">
+
+  <input type="hidden" name="amount" value="999">
+
+  <input type="hidden" name="productinfo" value="Dry Fruit Hamper">
+
+  <input type="hidden" name="firstname" value="Customer">
+
+  <input type="hidden" name="email" value="customer@email.com">
+
+  <input type="hidden" name="phone" value="9999999999">
+
+  <input type="hidden" name="hash" id="hash">
+
+  <input type="hidden" name="surl"
+    value="https://rjkumar081.github.io/dryfruit/thankyou.html">
+
+  <input type="hidden" name="furl"
+    value="https://rjkumar081.github.io/dryfruit/thankyou.html">
+
+  <button type="button" class="btn" onclick="payNow()">
+    Pay Now
+  </button>
+
 </form>
+
 </section>
 
 <!-- REVIEWS -->
