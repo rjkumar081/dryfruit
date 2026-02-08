@@ -1,143 +1,252 @@
+<!-- PREMIUM DRY FRUITS LANDING PAGE
+Inspired by the shared premium layout (glass header, strong hero, clean sections)
+Single-file for easy GitHub Pages deploy
+-->
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Fresh Dry Fruits | Premium Quality Dry Fruits</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeraPopi | Premium Dry Fruits & Gift Hampers</title>
+  <meta name="description" content="Buy premium quality dry fruits and luxury gift hampers. Fresh, hygienic packing. Pan‑India delivery." />
+  <link rel="icon" href="images/favicon.png" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.png">
+  <!-- Fonts -->
 
-  <meta name="description" content="Buy premium dry fruits online. Fresh, hygienic & trusted dry fruits delivered across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cream:#f7f3ed;
+      --pista:#6b8e23;
+      --brown:#4a2f1b;
+      --gold:#facc15;
+      --dark:#0f172a;
+      --glass:rgba(255,255,255,.65);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto;
+      color:var(--brown);
+      background:#fafafa;
+    }
+
+    /* ================= HEADER ================= */
+    header{
+      position:fixed; top:0; left:0; width:100%; z-index:1000;
+      backdrop-filter: blur(10px);
+      background:linear-gradient(135deg,#fff, #fff8ee);
+      border-bottom:1px solid #eee;
+      transition:.3s ease;
+    }
+    header.shrink{padding:6px 0}
+    .nav{
+      max-width:1200px; margin:auto; padding:12px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand img{height:54px; width:auto}
+    .brand span{font-weight:800; font-size:1.3rem}
+    nav a{
+      text-decoration:none; color:var(--brown); font-weight:500; margin-left:22px;
+      position:relative;
+    }
+    nav a::after{
+      content:""; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:var(--pista);
+      transition:.3s;
+    }
+    nav a:hover::after{width:100%}
+    .cta{
+      background:var(--pista); color:#fff; padding:10px 18px; border-radius:999px; font-weight:600;
+      box-shadow:0 6px 0 #58761c, 0 10px 25px rgba(0,0,0,.15);
+    }
+
+    /* ================= HERO ================= */
+    .hero{
+      margin-top:84px;
+      background:linear-gradient(135deg,#fff8ee,#eef3e2);
+    }
+    .hero-wrap{
+      max-width:1200px; margin:auto; padding:70px 20px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;
+    }
+    .badge{
+      display:inline-block; background:#e8efe0; color:var(--brown);
+      padding:6px 14px; border-radius:999px; font-size:13px; margin-bottom:14px;
+    }
+    .hero h1{font-size:3rem; line-height:1.15; margin:0 0 12px}
+    .hero h1 span{color:var(--pista)}
+    .hero p{font-size:1.05rem; opacity:.85; max-width:520px}
+    .hero-actions{display:flex; gap:14px; margin-top:22px}
+    .btn{
+      text-decoration:none; padding:12px 26px; border-radius:8px; font-weight:600; display:inline-block
+    }
+    .btn-primary{background:var(--pista); color:#fff}
+    .btn-outline{border:2px solid var(--pista); color:var(--pista)}
+    .trust{margin-top:14px; font-size:.9rem; opacity:.8}
+    .hero img{width:100%; max-height:380px; object-fit:contain}
+
+    /* ================= SECTIONS ================= */
+    section{padding:70px 20px}
+    .container{max-width:1200px; margin:auto}
+    .section-title{text-align:center; margin-bottom:40px}
+    .section-title h2{font-size:2.2rem; margin-bottom:8px}
+    .section-title p{opacity:.7}
+
+    /* Products */
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px}
+    .card{
+      background:#fff; border-radius:16px; padding:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      transition:.3s
+    }
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%; height:220px; object-fit:cover; border-radius:12px}
+    .price{color:var(--pista); font-weight:700}
+
+    /* Gift Hampers */
+    .hampers{background:var(--cream)}
+
+    /* Reviews */
+    .reviews{background:#fff}
+    .review{font-size:.95rem}
+
+    /* CTA Band */
+    .cta-band{
+      background:linear-gradient(135deg,#6b8e23,#8fb339);
+      color:#fff; text-align:center; padding:60px 20px
+    }
+
+    /* Footer */
+    footer{
+      background:linear-gradient(135deg,#08142a,#0b2a55);
+      color:#e5e7eb; padding:40px 20px
+    }
+    footer a{color:#c7d2fe; text-decoration:none; margin:0 10px}
+
+    /* WhatsApp */
+    .wa{
+      position:fixed; right:18px; bottom:18px; width:58px; height:58px; background:#25D366;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 6px 18px rgba(0,0,0,.25)
+    }
+    .wa img{width:28px}
+
+    /* Mobile */
+    @media(max-width:900px){
+      .hero-wrap{grid-template-columns:1fr; text-align:center}
+      .hero-actions{justify-content:center}
+    }
+  </style>
+
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="container header-inner">
-    <div class="logo">
-      <img src="images/logo.png" alt="Fresh Dry Fruits">
-      <span>Fresh Dry Fruits</span>
+<header id="hdr">
+  <div class="nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="MeraPopi" />
+      <span>MeraPopi</span>
     </div>
-
-    <nav class="nav">
-      <a href="#">Home</a>
+    <nav>
       <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-      <a href="#" class="cart-btn">🛒 Cart</a>
+      <a href="#hampers">Gift Hampers</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="cta">Order Now</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= HERO / SLIDER ================= -->
 <section class="hero">
-  <div class="hero-content container">
-    <h1>Premium Dry Fruits</h1>
-    <p>Fresh • Hygienic • Trusted Quality</p>
-
-    <ul>
-      <li>✔ Fresh Packing</li>
-      <li>✔ Best Prices</li>
-      <li>✔ Pan India Delivery</li>
-    </ul>
-
-    <a href="#" class="btn-primary">Order on WhatsApp</a>
+  <div class="hero-wrap">
+    <div>
+      <span class="badge">🌿 Premium Quality</span>
+      <h1>Fresh & Premium <span>Dry Fruits</span></h1>
+      <p>Hand‑picked almonds, cashews & raisins with hygienic packing. Trusted by families across India.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+        <a href="#hampers" class="btn btn-outline">Gift Hampers</a>
+      </div>
+      <div class="trust">⭐ 4.9 Rating • 🚚 Pan‑India Delivery • 🎁 Gift‑Ready</div>
+    </div>
+    <img src="images/hero-bowl.png" alt="Premium Dry Fruits" />
   </div>
 </section>
 
-<!-- ================= PRODUCTS ================= -->
-<section class="products" id="products">
+<section id="products">
   <div class="container">
-    <h2 class="section-title">Our Products</h2>
-
-    <div class="product-grid">
-
-      <div class="product-card">
-        <img src="images/badam.jpg" alt="Almonds">
-        <h3>Almonds (Badam)</h3>
-        <p class="price">₹299 / 250g</p>
-        <button class="btn-secondary">Pay Now</button>
-      </div>
-
-      <div class="product-card">
-        <img src="images/kaju.jpg" alt="Cashews">
-        <h3>Cashews (Kaju)</h3>
-        <p class="price">₹349 / 250g</p>
-        <button class="btn-secondary">Pay Now</button>
-      </div>
-
-      <div class="product-card">
-        <img src="images/kishmish.jpg" alt="Raisins">
-        <h3>Raisins (Kishmish)</h3>
-        <p class="price">₹159 / 250g</p>
-        <button class="btn-secondary">Pay Now</button>
-      </div>
-
+    <div class="section-title">
+      <h2>Our Best Sellers</h2>
+      <p>Freshly packed • Premium quality</p>
+    </div>
+    <div class="grid">
+      <div class="card"><img src="images/badam.jpg"><h3>Almonds</h3><p class="price">₹299 / 250g</p></div>
+      <div class="card"><img src="images/kaju.jpg"><h3>Cashews</h3><p class="price">₹349 / 250g</p></div>
+      <div class="card"><img src="images/kishmish.jpg"><h3>Raisins</h3><p class="price">₹159 / 250g</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= TRUST ================= -->
-<section class="trust">
-  <div class="container trust-grid">
-    <div>
-      <h3>⭐ 4.9/5 Rating</h3>
-      <p>Trusted by 1000+ customers</p>
-    </div>
-    <div>
-      <h3>🎁 Gift Ready</h3>
-      <p>Perfect for festivals & weddings</p>
-    </div>
-    <div>
-      <h3>🚚 Fast Delivery</h3>
-      <p>Pan India shipping</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="contact" id="contact">
+<section id="hampers" class="hampers">
   <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Email">
-      <input type="tel" placeholder="Mobile Number">
-      <textarea placeholder="Your message"></textarea>
-      <button class="btn-primary">Send Message</button>
-    </form>
+    <div class="section-title">
+      <h2>Luxury Gift Hampers</h2>
+      <p>Perfect for festivals & corporate gifting</p>
+    </div>
+    <div class="grid">
+      <div class="card"><img src="images/hamper1.jpg"><h3>Classic Box</h3><p class="price">₹999</p></div>
+      <div class="card"><img src="images/hamper2.jpg"><h3>Royal Hamper</h3><p class="price">₹1,799</p></div>
+      <div class="card"><img src="images/hamper3.jpg"><h3>Wedding Special</h3><p class="price">₹2,499</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>Fresh Dry Fruits</h4>
-      <p>Premium quality dry fruits you can trust.</p>
+<section id="reviews" class="reviews">
+  <div class="container">
+    <div class="section-title">
+      <h2>Customer Reviews</h2>
+      <p>Loved by customers nationwide</p>
     </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Shipping Policy</a>
-      <a href="#">Refund Policy</a>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p>📍 Delhi, India</p>
-      <p>📞 WhatsApp Support</p>
+    <div class="grid">
+      <div class="card review">⭐⭐⭐⭐⭐<p>Fresh quality & premium packing.</p><strong>Rahul – Delhi</strong></div>
+      <div class="card review">⭐⭐⭐⭐⭐<p>Perfect Diwali gift.</p><strong>Neha – Noida</strong></div>
+      <div class="card review">⭐⭐⭐⭐⭐<p>Worth every rupee.</p><strong>Amit – Gurgaon</strong></div>
     </div>
   </div>
+</section>
 
-  <p class="copyright">
-    © 2026 Fresh Dry Fruits. All rights reserved.
-  </p>
+<section class="cta-band" id="contact">
+  <h2>Order Now on WhatsApp</h2>
+  <p>Fast response • Easy ordering • Secure payments</p>
+  <a href="https://wa.me/919XXXXXXXXX" class="btn btn-outline" style="color:#fff;border-color:#fff">Chat on WhatsApp</a>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center">
+    <div style="margin-bottom:16px">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refund.html">Refund Policy</a>
+    </div>
+    <p>© 2026 MeraPopi • Premium Dry Fruits</p>
+  </div>
 </footer>
+
+<a class="wa" href="https://wa.me/919XXXXXXXXX" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>40) hdr.classList.add('shrink');
+    else hdr.classList.remove('shrink');
+  });
+</script>
 
 </body>
 </html>
