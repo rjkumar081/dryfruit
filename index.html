@@ -127,7 +127,7 @@ function payNow(){
   const txnid = "TXN" + Date.now();
   document.getElementById("txnid").value = txnid;
 
-  fetch("https://dryfruit-l8oa.onrender.com/hash", {
+  fetch("https://payu-backend-nyx3.onrender.com/hash", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
