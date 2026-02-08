@@ -1,173 +1,28 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Poppins, Arial, sans-serif;
-  background: #f7f3ed;
-  color: #4a2f1b;
-}
-
-/* ===== HEADER ===== */
-.brand-bar {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  z-index: 999;
-  transition: 0.3s;
-}
-
-.brand-bar.shrink {
-  height: 60px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand img {
-  height: 70px;
-  transition: 0.3s;
-}
-
-.brand-bar.shrink img {
-  height: 50px;
-}
-
-.brand span {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: 1s;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(247,243,237,.9), rgba(247,243,237,.2));
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
-  padding-left: 60px;
-  max-width: 500px;
-}
-
-.hero-content h1 {
-  font-size: 44px;
-}
-
-.hero-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.grid {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.review {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-}
-
-/* ===== BUTTON ===== */
-.btn {
-  display: inline-block;
-  background: #6b8e23;
-  color: #fff;
-  padding: 12px 26px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #4a2f1b;
-  color: #fff;
-  padding: 30px;
-  text-align: center;
-}
-
-.footer-links a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
+body{margin:0;font-family:Poppins;background:#f7f3ed;color:#4a2f1b}
+.brand-bar{display:flex;align-items:center;justify-content:space-between;
+padding:10px 30px;background:#fff;position:sticky;top:0;z-index:999}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:50px}
+.menu a{margin:0 12px;text-decoration:none;color:#4a2f1b;font-weight:600}
+.menu-toggle{display:none;font-size:26px}
+.hero-slider{position:relative;height:65vh;overflow:hidden}
+.hero-slider img{width:100%;height:65vh;object-fit:cover}
+.slide{display:none}
+.slide.active{display:block}
+.hero-content{position:absolute;top:50%;left:60px;transform:translateY(-50%);
+background:rgba(255,255,255,.85);padding:30px;border-radius:10px}
+.btn{background:#6b8e23;color:#fff;padding:12px 25px;border-radius:6px;text-decoration:none;display:inline-block}
+.products,.reviews,.connect,.payment{padding:60px 40px;text-align:center;background:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.card{background:#fff;padding:15px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,.1)}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+footer{background:#4a2f1b;color:#fff;padding:25px;text-align:center}
+.footer-links a{color:#fff;margin:0 10px}
+.wa-float{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;
+padding:15px;border-radius:50%;font-size:22px}
+@media(max-width:768px){
+.menu{display:none;flex-direction:column}
+.menu.show{display:flex}
+.menu-toggle{display:block}
+.hero-content{left:20px;right:20px}
 }
