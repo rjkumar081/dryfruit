@@ -137,34 +137,37 @@ document.getElementById("menu").classList.toggle("show");
 }
 </script>
 <script>
-function payNow(){
-
+async function payNow() {
   const txnid = "TXN" + Date.now();
   document.getElementById("txnid").value = txnid;
 
-  fetch("https://payu-backend-nyx3.onrender.com/hash", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      txnid: txnid,
-      amount: "999",
-      productinfo: "Dry Fruit Hamper",
-      firstname: "Customer",
-      email: "customer@email.com"
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
+  try {
+    const response = await fetch("https://payu-backend-nyx3.onrender.com/hash", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        txnid: txnid,
+        amount: "999",
+        productinfo: "Dry Fruit Hamper",
+        firstname: "Customer",
+        email: "customer@email.com"
+      })
+    });
+
+    const data = await response.json();
+
+    if (!data.hash) {
+      alert("Hash not received");
+      return;
+    }
+
     document.getElementById("hash").value = data.hash;
     document.getElementById("payuForm").submit();
-  })
-  .catch(err => {
-    alert("Payment error, please try again");
-    console.error(err);
-  });
 
+  } catch (err) {
+    console.error(err);
+    alert("Payment error, please try again");
+  }
 }
 </script>
 
