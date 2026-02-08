@@ -69,30 +69,20 @@ gtag('config', 'G-XXXXXXXX');
 </section>
 
 <form id="payuForm" action="https://secure.payu.in/_payment" method="post">
-
-  <input type="hidden" name="key" value="LIVE_MERCHANT_KEY">
-
+  <input type="hidden" name="key" value="YOUR_LIVE_KEY">
   <input type="hidden" name="txnid" id="txnid">
-
-  <input type="hidden" name="amount" value="999">
-
-  <input type="hidden" name="productinfo" value="Dry Fruit Hamper">
-
+  <input type="hidden" name="amount" value="299">
+  <input type="hidden" name="productinfo" value="Dry Fruits Order">
   <input type="hidden" name="firstname" value="Customer">
-
-  <input type="hidden" name="email" value="customer@email.com">
-
+  <input type="hidden" name="email" value="customer@test.com">
   <input type="hidden" name="phone" value="9999999999">
-
+  <input type="hidden" name="surl" value="https://rjkumar081.github.io/dryfruit/thankyou.html">
+  <input type="hidden" name="furl" value="https://rjkumar081.github.io/dryfruit/thankyou.html">
   <input type="hidden" name="hash" id="hash">
+</form>
 
-  <input type="hidden" name="surl"
-    value="https://rjkumar081.github.io/dryfruit/thankyou.html">
 
-  <input type="hidden" name="furl"
-    value="https://rjkumar081.github.io/dryfruit/thankyou.html">
-
-  <button type="button" class="btn" onclick="payNow()">
+<button onclick="payNow()" class="btn">Pay Now</button>
     Pay Now
   </button>
 
@@ -139,25 +129,31 @@ document.getElementById("menu").classList.toggle("show");
 <script>
 async function payNow() {
   const txnid = "TXN" + Date.now();
+
   document.getElementById("txnid").value = txnid;
 
   try {
-    const response = await fetch("https://payu-backend-nyx3.onrender.com/hash", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        txnid: txnid,
-        amount: "999",
-        productinfo: "Dry Fruit Hamper",
-        firstname: "Customer",
-        email: "customer@email.com"
-      })
-    });
+    const response = await fetch(
+      "https://payu-backend-nyx3.onrender.com/hash",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          txnid: txnid,
+          amount: "299",
+          productinfo: "Dry Fruits Order",
+          firstname: "Customer",
+          email: "customer@test.com"
+        })
+      }
+    );
 
     const data = await response.json();
 
     if (!data.hash) {
-      alert("Hash not received");
+      alert("Hash not generated");
       return;
     }
 
