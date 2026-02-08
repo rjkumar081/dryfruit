@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MeraPopi Dry Fruits | Premium Dry Fruits & Gift Hampers</title>
-<meta name="description" content="Buy premium quality dry fruits and luxury gift hampers. Fresh, hygienically packed, pan-India delivery.">
+<meta name="description" content="Buy premium quality dry fruits & luxury gift hampers. Fresh, hygienically packed, pan India delivery.">
 
 <link rel="icon" href="images/favicon.png">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -21,13 +20,13 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Poppins, sans-serif;
+  font-family:Poppins,sans-serif;
   color:var(--brown);
   background:#fff;
 }
 a{text-decoration:none}
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 header{
   position:fixed;
   top:0; left:0;
@@ -55,7 +54,7 @@ header.shrink{padding:6px 0}
 }
 .brand img{height:48px}
 nav a{
-  margin-left:24px;
+  margin-left:22px;
   color:var(--brown);
   font-weight:500;
   position:relative;
@@ -70,62 +69,84 @@ nav a::after{
 }
 nav a:hover::after{width:100%}
 
-/* ================= HERO SLIDER ================= */
-.hero{
+/* ===== HERO SLIDER ===== */
+.hero-slider{
   margin-top:80px;
+  position:relative;
+  height:60vh;
   background:linear-gradient(135deg,#fff,#f7f3ed);
+  overflow:hidden;
 }
-.hero-wrap{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
+.hero-slide{
+  position:absolute;
+  inset:0;
+  display:flex;
   align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+  opacity:0;
+  transition:opacity .9s ease;
 }
-.hero h1{
-  font-size:3rem;
+.hero-slide.active{
+  opacity:1;
+  z-index:1;
+}
+.hero-text{max-width:480px}
+.hero-text h1{
+  font-size:2.8rem;
   line-height:1.15;
 }
-.hero h1 span{color:var(--gold)}
-.hero p{
-  font-size:1.05rem;
+.hero-text span{color:var(--gold)}
+.hero-text p{
   opacity:.85;
-  max-width:520px;
+  margin:14px 0 18px;
 }
-.hero-actions{
-  display:flex;
-  gap:14px;
-  margin-top:22px;
-}
-.btn{
-  padding:12px 26px;
-  border-radius:6px;
-  font-weight:600;
+.badge{
+  background:#efe3d6;
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  margin-bottom:12px;
+  font-size:.85rem;
 }
 .btn-primary{
   background:var(--brown);
   color:#fff;
+  padding:12px 26px;
+  border-radius:6px;
+  font-weight:600;
 }
-.btn-outline{
-  border:2px solid var(--brown);
-  color:var(--brown);
-}
-.hero img{
-  width:100%;
+.hero-slide img{
+  width:40%;
   max-height:380px;
   object-fit:contain;
 }
 
-/* ================= SECTION ================= */
+/* dots */
+.hero-dots{
+  position:absolute;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+}
+.hero-dots span{
+  width:10px;height:10px;
+  border-radius:50%;
+  background:#ccc;
+  cursor:pointer;
+}
+.hero-dots span.active{background:var(--gold)}
+
+/* ===== SECTION ===== */
 section{padding:70px 20px}
 .container{max-width:1200px;margin:auto}
 .section-title{text-align:center;margin-bottom:40px}
-.section-title h2{font-size:2.2rem;margin-bottom:6px}
+.section-title h2{font-size:2.2rem}
 .section-title p{opacity:.7}
 
-/* ================= PRODUCTS ================= */
+/* ===== PRODUCTS ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -145,21 +166,15 @@ section{padding:70px 20px}
   object-fit:cover;
   border-radius:12px;
 }
-.price{
-  color:var(--gold);
-  font-weight:700;
-  margin-top:6px;
-}
+.price{color:var(--gold);font-weight:700}
 
-/* ================= GIFT HAMPERS ================= */
+/* ===== HAMPERS ===== */
 .hampers{background:var(--cream)}
 
-/* ================= REVIEWS ================= */
-.review{
-  font-size:.95rem;
-}
+/* ===== REVIEWS ===== */
+.review{font-size:.95rem}
 
-/* ================= PAYMENT ================= */
+/* ===== PAYMENT ===== */
 .payment{
   background:#fff7ec;
   text-align:center;
@@ -177,12 +192,12 @@ section{padding:70px 20px}
   margin-top:20px;
   background:#25d366;
   color:#fff;
-  padding:14px 26px;
+  padding:14px 28px;
   border-radius:50px;
   font-weight:700;
 }
 
-/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 footer{
   background:#2b1b12;
   color:#f7f3ed;
@@ -196,7 +211,7 @@ footer a{
 }
 footer a:hover{opacity:1}
 
-/* ================= WHATSAPP ================= */
+/* ===== WHATSAPP ===== */
 .whatsapp{
   position:fixed;
   right:18px;
@@ -212,13 +227,18 @@ footer a:hover{opacity:1}
 }
 .whatsapp img{width:28px}
 
-/* ================= MOBILE ================= */
+/* ===== MOBILE ===== */
 @media(max-width:900px){
-  .hero-wrap{
-    grid-template-columns:1fr;
+  .hero-slide{
+    flex-direction:column-reverse;
     text-align:center;
+    padding:20px;
   }
-  .hero-actions{justify-content:center}
+  .hero-slide img{
+    width:70%;
+    margin-bottom:20px;
+  }
+  .hero-text h1{font-size:2rem}
 }
 </style>
 </head>
@@ -228,7 +248,7 @@ footer a:hover{opacity:1}
 <header id="hdr">
   <div class="nav">
     <div class="brand">
-      <img src="images/logo.png" alt="MeraPopi">
+      <img src="images/logo.png">
       MeraPopi Dry Fruits
     </div>
     <nav>
@@ -240,9 +260,9 @@ footer a:hover{opacity:1}
   </div>
 </header>
 
+<!-- HERO SLIDER -->
 <section class="hero-slider">
 
-  <!-- Slide 1 -->
   <div class="hero-slide active">
     <div class="hero-text">
       <span class="badge">🌿 Premium Quality</span>
@@ -250,35 +270,31 @@ footer a:hover{opacity:1}
       <p>Hand-picked almonds, cashews & raisins with hygienic packing.</p>
       <a href="#products" class="btn-primary">Shop Now</a>
     </div>
-    <img src="images/banner1.jpg" alt="Premium Dry Fruits">
+    <img src="images/hero1.png">
   </div>
 
-  <!-- Slide 2 -->
   <div class="hero-slide">
     <div class="hero-text">
       <span class="badge">🎁 Luxury Gifting</span>
-      <h1>Dry Fruit<br><span>Gift Hampers</span></h1>
-      <p>Perfect for festivals, weddings & corporate gifting.</p>
+      <h1>Dry Fruit <span>Gift Hampers</span></h1>
+      <p>Perfect for festivals & celebrations.</p>
       <a href="#hampers" class="btn-primary">View Hampers</a>
     </div>
-    <img src="images/banner2.jpg" alt="Gift Hampers">
+    <img src="images/hero2.png">
   </div>
 
-  <!-- Slide 3 (Diwali) -->
   <div class="hero-slide">
     <div class="hero-text">
       <span class="badge">🪔 Diwali Special</span>
       <h1>Celebrate Diwali<br><span>With Health</span></h1>
-      <p>Premium festive dry fruit boxes for your loved ones.</p>
+      <p>Premium festive dry fruit boxes.</p>
       <a href="#payment" class="btn-primary">Order for Diwali</a>
     </div>
-    <img src="images/banner3.jpg" alt="Diwali Dry Fruits">
+    <img src="images/hero-diwali.png">
   </div>
 
-  <!-- Dots -->
   <div class="hero-dots"></div>
 </section>
-
 
 <!-- PRODUCTS -->
 <section id="products">
@@ -288,21 +304,9 @@ footer a:hover{opacity:1}
       <p>Fresh • Premium • Hygienic</p>
     </div>
     <div class="grid">
-      <div class="card">
-        <img src="images/badam.jpg">
-        <h3>Almonds (Badam)</h3>
-        <div class="price">₹299 / 250g</div>
-      </div>
-      <div class="card">
-        <img src="images/kaju.jpg">
-        <h3>Cashews (Kaju)</h3>
-        <div class="price">₹349 / 250g</div>
-      </div>
-      <div class="card">
-        <img src="images/kishmish.jpg">
-        <h3>Raisins (Kishmish)</h3>
-        <div class="price">₹159 / 250g</div>
-      </div>
+      <div class="card"><img src="images/badam.jpg"><h3>Almonds</h3><div class="price">₹299 / 250g</div></div>
+      <div class="card"><img src="images/kaju.jpg"><h3>Cashews</h3><div class="price">₹349 / 250g</div></div>
+      <div class="card"><img src="images/kishmish.jpg"><h3>Raisins</h3><div class="price">₹159 / 250g</div></div>
     </div>
   </div>
 </section>
@@ -315,21 +319,9 @@ footer a:hover{opacity:1}
       <p>Perfect for festivals & celebrations</p>
     </div>
     <div class="grid">
-      <div class="card">
-        <img src="images/hamper1.jpg">
-        <h3>Classic Hamper</h3>
-        <div class="price">₹999</div>
-      </div>
-      <div class="card">
-        <img src="images/hamper2.jpg">
-        <h3>Royal Hamper</h3>
-        <div class="price">₹1,799</div>
-      </div>
-      <div class="card">
-        <img src="images/hamper3.jpg">
-        <h3>Wedding Special</h3>
-        <div class="price">₹2,499</div>
-      </div>
+      <div class="card"><img src="images/hamper1.jpg"><h3>Classic Hamper</h3><div class="price">₹999</div></div>
+      <div class="card"><img src="images/hamper2.jpg"><h3>Royal Hamper</h3><div class="price">₹1,799</div></div>
+      <div class="card"><img src="images/hamper3.jpg"><h3>Wedding Special</h3><div class="price">₹2,499</div></div>
     </div>
   </div>
 </section>
@@ -339,7 +331,7 @@ footer a:hover{opacity:1}
   <div class="container">
     <div class="section-title">
       <h2>Customer Love</h2>
-      <p>Rated 4.9★ by happy customers</p>
+      <p>Rated 4.9★ by customers</p>
     </div>
     <div class="grid">
       <div class="card review">⭐⭐⭐⭐⭐<br>Fresh quality & premium packing.<br><strong>Rahul – Delhi</strong></div>
@@ -354,21 +346,15 @@ footer a:hover{opacity:1}
   <h2>Easy & Secure Payment</h2>
   <p>Pay via any UPI app</p>
   <div class="payment-box">
-    <p><strong>Scan or click below to pay</strong></p>
-    <a href="upi://pay?pa=YOURUPI@ybl&pn=MeraPopi%20Dry%20Fruits&cu=INR">
-      Pay via UPI
-    </a>
+    <a href="upi://pay?pa=YOURUPI@ybl&pn=MeraPopi%20Dry%20Fruits&cu=INR">Pay via UPI</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="refund.html">Refund</a>
-  </div>
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="refund.html">Refund</a>
   <p style="margin-top:16px">© 2026 MeraPopi Dry Fruits</p>
 </footer>
 
@@ -377,10 +363,34 @@ footer a:hover{opacity:1}
 </a>
 
 <script>
+/* header shrink */
 const hdr=document.getElementById("hdr");
-window.addEventListener("scroll",()=>{
-  hdr.classList.toggle("shrink",window.scrollY>40);
+window.addEventListener("scroll",()=>hdr.classList.toggle("shrink",window.scrollY>40));
+
+/* hero slider */
+const slides=document.querySelectorAll(".hero-slide");
+const dotsBox=document.querySelector(".hero-dots");
+let i=0;
+
+slides.forEach((_,idx)=>{
+  const d=document.createElement("span");
+  if(idx===0)d.classList.add("active");
+  d.onclick=()=>show(idx);
+  dotsBox.appendChild(d);
 });
+const dots=dotsBox.querySelectorAll("span");
+
+function show(n){
+  slides.forEach(s=>s.classList.remove("active"));
+  dots.forEach(d=>d.classList.remove("active"));
+  slides[n].classList.add("active");
+  dots[n].classList.add("active");
+  i=n;
+}
+setInterval(()=>{
+  i=(i+1)%slides.length;
+  show(i);
+},5000);
 </script>
 
 </body>
