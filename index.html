@@ -1,87 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Royal Dry Fruits</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+}
 
-<!-- HEADER -->
-<header class="header">
-  <div class="overlay">
-    <h1 class="logo">Royal Dry Fruits</h1>
-    <p class="tagline">Premium | Fresh | Healthy</p>
-    <a href="#products" class="btn">Explore Products</a>
-  </div>
-</header>
+/* TOP BAR */
+.topbar {
+  background: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  font-size: 14px;
+}
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>About Our Dry Fruits</h2>
-  <p>
-    Royal Dry Fruits provides hand-picked premium quality almonds, cashews,
-    walnuts, pistachios, raisins and more. Our dry fruits are 100% natural,
-    hygienically packed, and sourced from trusted farms.
-  </p>
-</section>
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2') center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 40px;
+  max-width: 700px;
+  margin-left: 10%;
+}
+.hero h1 { font-size: 42px; }
 
-<!-- PRODUCTS -->
-<section id="products" class="products">
-  <h2>Our Premium Products</h2>
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #d4a373;
+  padding: 10px 25px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+}
 
-  <div class="product-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1604908554033-93b1f6c84d63" />
-      <h3>Almonds</h3>
-      <p>Rich in protein, vitamin E and antioxidants.</p>
-    </div>
+/* EXPERIENCE */
+.experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  padding: 40px 10%;
+  background: #fff;
+}
+.exp-box {
+  text-align: center;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1615486364189-1e06e4c1bfcf" />
-      <h3>Cashews</h3>
-      <p>Creamy, delicious and full of healthy fats.</p>
-    </div>
+/* SECTIONS */
+section {
+  padding: 60px 10%;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1610629336230-2a7b7870a16c" />
-      <h3>Walnuts</h3>
-      <p>Boost brain health and heart wellness.</p>
-    </div>
+/* PRODUCTS */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46e2" />
-      <h3>Pistachios</h3>
-      <p>Crunchy taste with powerful nutrition.</p>
-    </div>
-  </div>
-</section>
+/* WHY US */
+.why-us ul {
+  list-style: none;
+  font-size: 18px;
+}
 
-<!-- BENEFITS -->
-<section class="benefits">
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li>✔ Premium Quality Dry Fruits</li>
-    <li>✔ Fresh & Hygienic Packaging</li>
-    <li>✔ Affordable Prices</li>
-    <li>✔ Trusted by Thousands</li>
-  </ul>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-content">
-    <h3>Royal Dry Fruits</h3>
-    <p>Healthy Lifestyle Starts With Us</p>
-    <p>📞 +91 90000 00000</p>
-    <p>📧 info@royaldryfruits.com</p>
-  </div>
-  <div class="copyright">
-    © 2026 Royal Dry Fruits | All Rights Reserved
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+/* FOOTER */
+.footer {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 50px 10%;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+.copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
