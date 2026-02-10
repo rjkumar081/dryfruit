@@ -1,99 +1,149 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Royal Dry Fruits | Premium Dry Fruits Since 1999</title>
 
-/* TOP BAR */
-.topbar {
-  background: #1c1c1c;
-  color: #fff;
-  text-align: center;
-  padding: 6px;
-  font-size: 14px;
-}
+<meta name="description" content="Buy premium quality dry fruits online from Royal Dry Fruits. 25+ years of trust in almonds, cashews, walnuts, pistachios. Wholesale & retail available.">
+<meta name="keywords" content="dry fruits wholesale, premium dry fruits, buy dry fruits online, almonds cashews walnuts">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* HERO */
-.hero {
-  background: url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2') center/cover;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-}
-.hero-content {
-  background: rgba(0,0,0,0.65);
-  color: #fff;
-  padding: 40px;
-  max-width: 700px;
-  margin-left: 10%;
-}
-.hero h1 { font-size: 42px; }
+<link rel="stylesheet" href="style.css">
+</head>
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #d4a373;
-  padding: 10px 25px;
-  color: #000;
-  text-decoration: none;
-  border-radius: 25px;
-}
+<body>
 
-/* EXPERIENCE */
-.experience {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  padding: 40px 10%;
-  background: #fff;
-}
-.exp-box {
-  text-align: center;
-}
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 +91 90000 00000 &nbsp; | &nbsp; 📧 info@royaldryfruits.com
+</div>
 
-/* SECTIONS */
-section {
-  padding: 60px 10%;
-}
+<!-- HEADER -->
+<header class="hero">
+  <div class="hero-box">
+    <h1>Royal Dry Fruits</h1>
+    <h2>25+ Years of Premium Quality & Trust</h2>
+    <p>
+      India’s trusted dry fruits brand supplying premium almonds, cashews,
+      walnuts & pistachios to families, retailers and wholesalers since 1999.
+    </p>
 
-/* PRODUCTS */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-}
-.product-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+    <div class="hero-buttons">
+      <a href="#products" class="btn gold">Explore Products</a>
+      <a href="https://wa.me/919000000000" class="btn outline">Order on WhatsApp</a>
+    </div>
+  </div>
+</header>
 
-/* WHY US */
-.why-us ul {
-  list-style: none;
-  font-size: 18px;
-}
+<!-- STATS -->
+<section class="stats">
+  <div><h3>25+</h3><p>Years Experience</p></div>
+  <div><h3>10,000+</h3><p>Customers</p></div>
+  <div><h3>500+</h3><p>Retailers</p></div>
+  <div><h3>100%</h3><p>Quality Assured</p></div>
+</section>
 
-/* FOOTER */
-.footer {
-  background: #1c1c1c;
-  color: #fff;
-  padding: 50px 10%;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-}
-.copy {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-}
+<!-- ABOUT -->
+<section class="about">
+  <h2>Our Legacy of Excellence</h2>
+  <p>
+    Established in 1999, Royal Dry Fruits has grown from a small family business
+    into a trusted premium dry fruits supplier across India. We source our
+    almonds from California, walnuts from Kashmir, pistachios from Iran and
+    cashews from certified Indian farms.
+  </p>
+  <p>
+    Our focus has always been purity, nutrition and long-term trust. Each batch
+    undergoes strict quality checks, moisture control and hygienic vacuum
+    packaging to preserve taste and freshness.
+  </p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Premium Dry Fruits Range</h2>
+
+  <div class="product-grid">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1604908554033-93b1f6c84d63">
+      <h3>Almonds (Badam)</h3>
+      <p>Improves brain function, rich in Vitamin-E and antioxidants.</p>
+      <a href="https://wa.me/919000000000" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615486364189-1e06e4c1bfcf">
+      <h3>Cashews (Kaju)</h3>
+      <p>High in healthy fats, perfect for snacks & sweets.</p>
+      <a href="https://wa.me/919000000000" class="order-btn">Order Now</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1610629336230-2a7b7870a16c">
+      <h3>Walnuts (Akhrot)</h3>
+      <p>Excellent for heart & brain health.</p>
+      <a href="https://wa.me/919000000000" class="order-btn">Order Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHOLESALE -->
+<section class="wholesale">
+  <h2>Wholesale Enquiry</h2>
+  <p>
+    We supply bulk dry fruits to retailers, hotels, sweet manufacturers
+    and distributors across India.
+  </p>
+
+  <form class="form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="text" placeholder="Business Name">
+    <textarea placeholder="Your Requirement"></textarea>
+    <button type="submit">Submit Enquiry</button>
+  </form>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="seo">
+  <h2>Buy Premium Dry Fruits Online in India</h2>
+  <p>
+    Looking to buy premium dry fruits online? Royal Dry Fruits offers
+    high-quality almonds, cashews, walnuts and pistachios at competitive prices.
+    Our products are ideal for daily consumption, gifting, festivals and bulk
+    wholesale requirements.
+  </p>
+  <p>
+    With over 25 years of experience, we ensure authenticity, freshness and
+    consistent quality. We cater to both retail and wholesale customers with
+    customized packaging and bulk pricing options.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h3>Royal Dry Fruits</h3>
+      <p>Premium Dry Fruits Supplier Since 1999</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p>Home</p>
+      <p>Products</p>
+      <p>Wholesale</p>
+      <p>Contact</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📞 +91 90000 00000</p>
+      <p>📧 info@royaldryfruits.com</p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Royal Dry Fruits. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
