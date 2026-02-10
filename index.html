@@ -11,26 +11,26 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Segoe UI',sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
   background:#fbf7f2;
-  color:#3a2a1a;
+  color:#3b2a1a;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 header{
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:999;
   background:#fff;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 .nav{
   max-width:1200px;
   margin:auto;
-  padding:16px 20px;
+  padding:16px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -38,78 +38,78 @@ header{
 .logo{
   font-size:26px;
   font-weight:800;
-  color:#5a351f;
 }
 .logo span{color:#c9a45c}
 
-/* ================= HERO SLIDER ================= */
-.hero-slider{
+/* ===== SLIDER ===== */
+.slider{
   position:relative;
   width:100%;
-  height:85vh;
+  height:80vh;
   overflow:hidden;
 }
 
 .slide{
   position:absolute;
   inset:0;
-  background-size:cover;
-  background-position:center;
   opacity:0;
-  transition:opacity 1.2s ease-in-out;
+  transition:opacity 1s ease-in-out;
 }
 
 .slide.active{
   opacity:1;
 }
 
-.slide::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.45);
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.hero-content{
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+
+.content{
   position:absolute;
   top:50%;
   left:8%;
   transform:translateY(-50%);
   color:#fff;
-  max-width:650px;
+  max-width:600px;
   z-index:2;
 }
 
-.hero-content h1{
+.content h1{
   font-size:52px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
-.hero-content p{
+.content p{
   font-size:18px;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
-.hero-content a{
+.content a{
   display:inline-block;
-  padding:14px 34px;
   background:#c9a45c;
   color:#fff;
+  padding:14px 34px;
   text-decoration:none;
-  font-weight:600;
   border-radius:6px;
+  font-weight:600;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
-  .hero-content{
+  .content{
     left:5%;
     right:5%;
     text-align:center;
   }
-  .hero-content h1{
-    font-size:34px;
-  }
+  .content h1{font-size:34px;}
 }
 </style>
 </head>
@@ -122,29 +122,35 @@ header{
   </div>
 </header>
 
-<!-- ================= HERO SLIDER ================= -->
-<section class="hero-slider">
+<!-- ===== SLIDER ===== -->
+<section class="slider">
 
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1622445272460-6d7a7d89f480?auto=format&fit=crop&w=1600&q=80')">
-    <div class="hero-content">
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1622445272460-6d7a7d89f480?auto=format&fit=crop&w=1600&q=80">
+    <div class="overlay"></div>
+    <div class="content">
       <h1>Premium Almonds & Cashews</h1>
-      <p>Handpicked dry fruits for daily nutrition</p>
+      <p>Handpicked dry fruits for daily health</p>
       <a href="#">Shop Now</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=1600&q=80')">
-    <div class="hero-content">
-      <h1>Pure • Natural • Hygienic</h1>
-      <p>Export quality dry fruits packed fresh</p>
-      <a href="#">Explore Collection</a>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=1600&q=80">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Pure & Hygienic Dry Fruits</h1>
+      <p>Fresh packing • Premium quality</p>
+      <a href="#">Explore</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=1600&q=80')">
-    <div class="hero-content">
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=1600&q=80">
+    <div class="overlay"></div>
+    <div class="content">
       <h1>Luxury Gift Hampers</h1>
-      <p>Perfect for Diwali, weddings & gifting</p>
+      <p>Perfect for Diwali & celebrations</p>
       <a href="#">View Hampers</a>
     </div>
   </div>
@@ -152,13 +158,13 @@ header{
 </section>
 
 <script>
-const slides = document.querySelectorAll(".slide");
-let current = 0;
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
 setInterval(() => {
-  slides[current].classList.remove("active");
-  current = (current + 1) % slides.length;
-  slides[current].classList.add("active");
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
 }, 4000);
 </script>
 
