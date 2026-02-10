@@ -1,74 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MeraPopi Dry Fruits | Premium Dry Fruits Online</title>
-<meta name="description" content="Buy premium dry fruits online – Almonds, Cashews, Raisins, Pistachios & more. Hygienic packing, pan-India delivery.">
 
-<link rel="icon" href="https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5">
+<title>MeraPopi Dry Fruits | Premium Luxury Dry Fruits</title>
+<meta name="description" content="MeraPopi Dry Fruits – Premium almonds, cashews, pistachios, walnuts & exotic dry fruits. Luxury quality, hygienic packing & pan-India delivery.">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
 
 <style>
-/* GLOBAL STYLES */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#fffaf4;color:#3b2a1a;line-height:1.6}
-/* HEADER */
-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.08)}
-.navbar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;}
-.logo{font-size:24px;font-weight:800;color:#6b3e26}
-.logo span{color:#c89b5c}
-nav a{margin-left:24px;text-decoration:none;color:#3b2a1a;font-weight:600}
-/* HERO SLIDER */
-.hero-slider{position:relative;height:80vh;overflow:hidden;margin-top:70px;}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease;}
-.hero-slide.active{opacity:1;}
-.hero-text{position:absolute;left:8%;top:50%;transform:translateY(-50%);color:#fff;z-index:2;max-width:700px;}
-.hero-text h1{font-size:48px;margin-bottom:10px;text-shadow:0 2px 5px rgba(0,0,0,.5);}
-.hero-text p{font-size:18px;margin-bottom:20px;text-shadow:0 1px 4px rgba(0,0,0,.45);}
-.hero-text .btn{display:inline-block;padding:14px 28px;background:#c89b5c;color:#fff;border-radius:8px;font-size:16px;text-decoration:none;font-weight:600;}
-/* DOTS */
-.dots{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:10px;}
-.dot{width:12px;height:12px;border-radius:50%;background:#ddd;cursor:pointer;}
-.dot.active{background:#c89b5c;}
-/* SECTIONS */
-section{padding:70px 20px}
-.container{max-width:1200px;margin:auto}
-.section-title{text-align:center;font-size:32px;margin-bottom:12px}
-.section-sub{opacity:.8;text-align:center;max-width:750px;margin:0 auto 40px}
-/* PRODUCT GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card img{width:100%;height:240px;object-fit:cover}
-.card-body{padding:18px}
-.card-body h3{margin-bottom:6px;font-size:20px;font-weight:600}
-.card-body p{font-size:14px;color:#5c4a3a}
-/* BENEFITS */
-.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;text-align:center}
-.benefit{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
-.benefit h3{font-size:18px;margin-bottom:8px}
-/* FAQ */
-.faq-item{margin-bottom:14px;padding:18px;background:#fff;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,.07)}
-/* FOOTER */
-footer{background:#3b2a1a;color:#fff;padding:40px 20px;text-align:center;}
-footer a{color:#e7c48a;text-decoration:none;opacity:.9;margin:0 12px;font-size:14px;}
-footer a:hover{opacity:1;}
-.copy{margin-top:24px;font-size:13px;color:#e7c48a;}
-</style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#fffaf2;color:#3a2a1a;line-height:1.7}
 
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:100;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.nav{
+  max-width:1200px;margin:auto;
+  padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{
+  font-size:26px;font-weight:800;color:#6b3e26;
+}
+.logo span{color:#c9a45c}
+nav a{
+  margin-left:22px;
+  text-decoration:none;
+  color:#3a2a1a;
+  font-weight:600;
+}
+
+/* HERO SLIDER */
+.hero-slider{
+  position:relative;
+  height:85vh;
+  overflow:hidden;
+}
+.hero-slide{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.2s ease;
+}
+.hero-slide.active{opacity:1}
+.hero-slide::after{
+  content:"";
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.45);
+}
+.hero-content{
+  position:absolute;
+  left:8%;top:50%;
+  transform:translateY(-50%);
+  color:#fff;
+  max-width:650px;
+  z-index:2;
+}
+.hero-content h1{
+  font-size:50px;
+  margin-bottom:12px;
+}
+.hero-content p{
+  font-size:18px;
+  margin-bottom:22px;
+}
+.hero-content a{
+  display:inline-block;
+  padding:14px 32px;
+  background:#c9a45c;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:6px;
+}
+
+/* SECTION */
+section{padding:90px 20px}
+.container{max-width:1200px;margin:auto}
+.title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:12px;
+}
+.sub{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 60px;
+  color:#6b5a45;
+}
+
+/* PRODUCTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:36px;
+}
+.card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+.card-body{
+  padding:22px;
+}
+.card-body h3{
+  margin-bottom:8px;
+}
+.card-body p{
+  font-size:14px;
+  color:#5c4a35;
+}
+
+/* BENEFITS */
+.benefits{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.benefit{
+  background:#fff;
+  padding:30px;
+  text-align:center;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+footer{
+  background:#3a2a1a;
+  color:#fff;
+  padding:60px 20px;
+}
+.footer{
+  max-width:1200px;margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+footer a{color:#e8c98a;text-decoration:none}
+.copy{text-align:center;margin-top:40px;color:#e8c98a;font-size:14px}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-content h1{font-size:34px}
+  .hero-content{left:5%;right:5%;text-align:center}
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="navbar">
+  <div class="nav">
     <div class="logo">Mera<span>Popi</span> Dry Fruits</div>
     <nav>
       <a href="#products">Products</a>
-      <a href="#benefits">Benefits</a>
-      <a href="#faq">FAQ</a>
+      <a href="#benefits">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -76,122 +175,112 @@ footer a:hover{opacity:1;}
 
 <!-- HERO SLIDER -->
 <section class="hero-slider">
-
-  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2');">
-    <div class="hero-text">
-      <h1>Premium Quality Dry Fruits</h1>
-      <p>Fresh, Hygienic & Nutritious – Delivered Across India</p>
-      <a href="#products" class="btn">Explore Products</a>
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1604908554160-57e3b2a43f9b?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-content">
+      <h1>Premium Dry Fruits</h1>
+      <p>Luxury quality nuts, handpicked & hygienically packed</p>
+      <a href="#products">Explore Collection</a>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1589987607627-616cac8a1bbd');">
-    <div class="hero-text">
-      <h1>Handpicked & Carefully Packed</h1>
-      <p>Almonds, Cashews, Pistachios & More – Best Quality</p>
-      <a href="#products" class="btn">Shop Now</a>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1589987607627-616cac8a1bbd?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-content">
+      <h1>Pure • Natural • Healthy</h1>
+      <p>Almonds, cashews, pistachios & exotic dry fruits</p>
+      <a href="#products">Shop Now</a>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5');">
-    <div class="hero-text">
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1615485925873-4a6dce70e2e5?auto=format&fit=crop&w=1600&q=80')">
+    <div class="hero-content">
       <h1>Festive Gift Hampers</h1>
-      <p>Perfect for Diwali, Weddings & Gifts</p>
-      <a href="#products" class="btn">View Hampers</a>
+      <p>Perfect for Diwali, weddings & premium gifting</p>
+      <a href="#products">View Hampers</a>
     </div>
   </div>
-
-  <div class="dots"></div>
 </section>
 
-<!-- PRODUCT SECTION -->
+<!-- PRODUCTS -->
 <section id="products">
   <div class="container">
-    <div class="section-title">Our Premium Dry Fruits</div>
-    <div class="section-sub">Carefully selected, naturally processed & hygienically packed.</div>
+    <div class="title">Our Signature Dry Fruits</div>
+    <div class="sub">Sourced from the finest farms, crafted for a luxury lifestyle.</div>
 
     <div class="grid">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1615485925873-4a6dce70e2e5">
+        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
           <h3>California Almonds</h3>
-          <p>Rich in protein, vitamins & heart-healthy nutrients.</p>
+          <p>Rich in protein & vitamin E. Daily nutrition essential.</p>
         </div>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1622445272460-6d7a7d89f480">
+        <img src="https://images.unsplash.com/photo-1622445272460-6d7a7d89f480?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
           <h3>Premium Cashews</h3>
-          <p>Deliciously creamy & rich source of healthy fats.</p>
+          <p>Creamy texture with rich healthy fats.</p>
         </div>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1604908554160-57e3b2a43f9b">
-        <div class="card-body">
-          <h3>Golden Raisins</h3>
-          <p>Sweet & nutritious, ideal for snacking & baking.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2">
+        <img src="https://images.unsplash.com/photo-1590080877777-1a1d6a1d6f6c?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
           <h3>Pistachios</h3>
-          <p>Rich in antioxidants & great for heart health.</p>
+          <p>Heart-friendly & antioxidant rich.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=900&q=80">
+        <div class="card-body">
+          <h3>Walnuts</h3>
+          <p>Omega-3 powerhouse for brain health.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BENEFITS SECTION -->
+<!-- BENEFITS -->
 <section id="benefits">
   <div class="container">
-    <div class="section-title">Why Choose Us?</div>
+    <div class="title">Why MeraPopi?</div>
     <div class="benefits">
-      <div class="benefit"><h3>Premium Quality</h3><p>Top-grade dry fruits only.</p></div>
-      <div class="benefit"><h3>Hygienic Packing</h3><p>Fresh sealed packaging.</p></div>
-      <div class="benefit"><h3>Fast Delivery</h3><p>All over India.</p></div>
-      <div class="benefit"><h3>Trusted Seller</h3><p>High customer satisfaction.</p></div>
+      <div class="benefit"><h3>Premium Quality</h3><p>Only export-grade dry fruits</p></div>
+      <div class="benefit"><h3>Hygienic Packing</h3><p>Fresh sealed & safe</p></div>
+      <div class="benefit"><h3>Pan-India Delivery</h3><p>Fast & reliable shipping</p></div>
+      <div class="benefit"><h3>Luxury Gifting</h3><p>Elegant festive hampers</p></div>
     </div>
   </div>
 </section>
 
-<!-- FAQ SECTION -->
-<section id="faq">
-  <div class="container">
-    <div class="section-title">Frequently Asked Questions</div>
-
-    <div class="faq-item"><strong>Are your dry fruits fresh?</strong>
-      <p>Yes, all dry fruits are freshly packed and quality checked.</p>
-    </div>
-    <div class="faq-item"><strong>Do you deliver pan-India?</strong>
-      <p>Yes, we deliver across India with fast shipping.</p>
-    </div>
-    <div class="faq-item"><strong>How can I order?</strong>
-      <p>You can order via WhatsApp or our contact page.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer id="contact">
-  <a href="#">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Refund Policy</a>
+  <div class="footer">
+    <div>
+      <h3>MeraPopi Dry Fruits</h3>
+      <p>Luxury dry fruits for a healthier lifestyle.</p>
+    </div>
+    <div>
+      <a href="#">About Us</a><br>
+      <a href="#">Privacy Policy</a><br>
+      <a href="#">Refund Policy</a>
+    </div>
+    <div>
+      <p>📍 India</p>
+      <p>📞 Order on WhatsApp</p>
+    </div>
+  </div>
   <div class="copy">© 2026 MeraPopi Dry Fruits</div>
 </footer>
 
 <script>
-// AUTO SLIDER CODE
 let slides=document.querySelectorAll(".hero-slide");
-let current=0;
-slides[current].classList.add("active");
+let i=0;
 setInterval(()=>{
-  slides[current].classList.remove("active");
-  current=(current+1)%slides.length;
-  slides[current].classList.add("active");
+  slides[i].classList.remove("active");
+  i=(i+1)%slides.length;
+  slides[i].classList.add("active");
 },4000);
 </script>
 
