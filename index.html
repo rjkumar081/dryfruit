@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MeraPopi Dry Fruits | Premium Luxury Dry Fruits</title>
-<meta name="description" content="MeraPopi Dry Fruits – Premium almonds, cashews, pistachios, walnuts & exotic dry fruits. Luxury quality, hygienic packing & pan-India delivery.">
+<title>MeraPopi Dry Fruits | Premium Dry Fruits & Gift Hampers</title>
+<meta name="description" content="Buy premium dry fruits online – almonds, cashews, pistachios, walnuts & luxury dry fruit gift hampers. Hygienic packing & pan India delivery.">
 
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#fffaf2;color:#3a2a1a;line-height:1.7}
+body{background:#fbf7f2;color:#3a2a1a;line-height:1.7}
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
   position:sticky;top:0;z-index:100;
-  background:#fff;
-  border-bottom:1px solid #eee;
+  background:#ffffff;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 .nav{
   max-width:1200px;margin:auto;
@@ -25,17 +25,18 @@ header{
   display:flex;justify-content:space-between;align-items:center;
 }
 .logo{
-  font-size:26px;font-weight:800;color:#6b3e26;
+  font-size:28px;font-weight:800;color:#5a351f;
 }
 .logo span{color:#c9a45c}
 nav a{
-  margin-left:22px;
+  margin-left:26px;
   text-decoration:none;
   color:#3a2a1a;
   font-weight:600;
 }
+nav a:hover{color:#c9a45c}
 
-/* HERO SLIDER */
+/* ================= HERO SLIDER ================= */
 .hero-slider{
   position:relative;
   height:85vh;
@@ -52,7 +53,7 @@ nav a{
 .hero-slide::after{
   content:"";
   position:absolute;inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,.45);
 }
 .hero-content{
   position:absolute;
@@ -63,16 +64,16 @@ nav a{
   z-index:2;
 }
 .hero-content h1{
-  font-size:50px;
+  font-size:52px;
   margin-bottom:12px;
 }
 .hero-content p{
   font-size:18px;
-  margin-bottom:22px;
+  margin-bottom:24px;
 }
 .hero-content a{
   display:inline-block;
-  padding:14px 32px;
+  padding:14px 36px;
   background:#c9a45c;
   color:#fff;
   text-decoration:none;
@@ -80,13 +81,13 @@ nav a{
   border-radius:6px;
 }
 
-/* SECTION */
+/* ================= SECTIONS ================= */
 section{padding:90px 20px}
 .container{max-width:1200px;margin:auto}
 .title{
   text-align:center;
-  font-size:36px;
-  margin-bottom:12px;
+  font-size:38px;
+  margin-bottom:14px;
 }
 .sub{
   text-align:center;
@@ -95,7 +96,7 @@ section{padding:90px 20px}
   color:#6b5a45;
 }
 
-/* PRODUCTS */
+/* ================= PRODUCTS ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -103,9 +104,9 @@ section{padding:90px 20px}
 }
 .card{
   background:#fff;
-  border-radius:16px;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
 }
 .card img{
   width:100%;
@@ -113,17 +114,17 @@ section{padding:90px 20px}
   object-fit:cover;
 }
 .card-body{
-  padding:22px;
+  padding:24px;
 }
-.card-body h3{
-  margin-bottom:8px;
-}
-.card-body p{
-  font-size:14px;
-  color:#5c4a35;
+.card-body h3{margin-bottom:8px}
+.card-body p{font-size:14px;color:#5c4a35}
+
+/* ================= GIFT SECTION ================= */
+.gift{
+  background:linear-gradient(135deg,#f7efe5,#fff);
 }
 
-/* BENEFITS */
+/* ================= BENEFITS ================= */
 .benefits{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -131,17 +132,17 @@ section{padding:90px 20px}
 }
 .benefit{
   background:#fff;
-  padding:30px;
+  padding:32px;
   text-align:center;
-  border-radius:16px;
+  border-radius:18px;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
   background:#3a2a1a;
   color:#fff;
-  padding:60px 20px;
+  padding:70px 20px;
 }
 .footer{
   max-width:1200px;margin:auto;
@@ -149,24 +150,40 @@ footer{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:30px;
 }
-footer a{color:#e8c98a;text-decoration:none}
-.copy{text-align:center;margin-top:40px;color:#e8c98a;font-size:14px}
+footer h3{margin-bottom:10px}
+footer a{
+  color:#e8c98a;
+  text-decoration:none;
+  display:block;
+  margin-bottom:6px;
+}
+.copy{
+  text-align:center;
+  margin-top:40px;
+  color:#e8c98a;
+  font-size:14px;
+}
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media(max-width:768px){
+  .hero-content{
+    left:5%;right:5%;
+    text-align:center;
+  }
   .hero-content h1{font-size:34px}
-  .hero-content{left:5%;right:5%;text-align:center}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">Mera<span>Popi</span> Dry Fruits</div>
     <nav>
-      <a href="#products">Products</a>
+      <a href="#products">Dry Fruits</a>
+      <a href="#gifts">Gift Hampers</a>
       <a href="#benefits">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -175,27 +192,27 @@ footer a{color:#e8c98a;text-decoration:none}
 
 <!-- HERO SLIDER -->
 <section class="hero-slider">
-  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1604908554160-57e3b2a43f9b?auto=format&fit=crop&w=1600&q=80')">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1615485925873-4a6dce70e2e5?auto=format&fit=crop&w=1600&q=80')">
     <div class="hero-content">
       <h1>Premium Dry Fruits</h1>
-      <p>Luxury quality nuts, handpicked & hygienically packed</p>
+      <p>Handpicked almonds, cashews & pistachios for healthy living</p>
       <a href="#products">Explore Collection</a>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1589987607627-616cac8a1bbd?auto=format&fit=crop&w=1600&q=80')">
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=1600&q=80')">
     <div class="hero-content">
-      <h1>Pure • Natural • Healthy</h1>
-      <p>Almonds, cashews, pistachios & exotic dry fruits</p>
+      <h1>Pure • Natural • Hygienic</h1>
+      <p>Export quality dry fruits packed fresh</p>
       <a href="#products">Shop Now</a>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1615485925873-4a6dce70e2e5?auto=format&fit=crop&w=1600&q=80')">
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=1600&q=80')">
     <div class="hero-content">
-      <h1>Festive Gift Hampers</h1>
-      <p>Perfect for Diwali, weddings & premium gifting</p>
-      <a href="#products">View Hampers</a>
+      <h1>Luxury Gift Hampers</h1>
+      <p>Perfect for Diwali, weddings & corporate gifting</p>
+      <a href="#gifts">View Hampers</a>
     </div>
   </div>
 </section>
@@ -203,39 +220,65 @@ footer a{color:#e8c98a;text-decoration:none}
 <!-- PRODUCTS -->
 <section id="products">
   <div class="container">
-    <div class="title">Our Signature Dry Fruits</div>
-    <div class="sub">Sourced from the finest farms, crafted for a luxury lifestyle.</div>
+    <div class="title">Our Premium Dry Fruits</div>
+    <div class="sub">Finest quality dry fruits sourced from trusted farms.</div>
 
     <div class="grid">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=900&q=80">
-        <div class="card-body">
-          <h3>California Almonds</h3>
-          <p>Rich in protein & vitamin E. Daily nutrition essential.</p>
-        </div>
-      </div>
-
-      <div class="card">
         <img src="https://images.unsplash.com/photo-1622445272460-6d7a7d89f480?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
-          <h3>Premium Cashews</h3>
-          <p>Creamy texture with rich healthy fats.</p>
+          <h3>Almonds (Badam)</h3>
+          <p>High in protein & vitamin E.</p>
         </div>
       </div>
 
       <div class="card">
         <img src="https://images.unsplash.com/photo-1590080877777-1a1d6a1d6f6c?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
-          <h3>Pistachios</h3>
-          <p>Heart-friendly & antioxidant rich.</p>
+          <h3>Cashews (Kaju)</h3>
+          <p>Creamy & rich premium cashews.</p>
         </div>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=900&q=80">
+        <img src="https://images.unsplash.com/photo-1589987607627-616cac8a1bbd?auto=format&fit=crop&w=900&q=80">
         <div class="card-body">
-          <h3>Walnuts</h3>
-          <p>Omega-3 powerhouse for brain health.</p>
+          <h3>Raisins (Kishmish)</h3>
+          <p>Naturally sweet & energy rich.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604908554160-57e3b2a43f9b?auto=format&fit=crop&w=900&q=80">
+        <div class="card-body">
+          <h3>Pistachios</h3>
+          <p>Heart healthy luxury nuts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT HAMPERS -->
+<section id="gifts" class="gift">
+  <div class="container">
+    <div class="title">Luxury Gift Hampers</div>
+    <div class="sub">Premium dry fruits beautifully packed for gifting.</div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=900&q=80">
+        <div class="card-body">
+          <h3>Classic Hamper</h3>
+          <p>Almonds • Cashews • Raisins</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606914501929-4dfedda6e8a4?auto=format&fit=crop&w=900&q=80">
+        <div class="card-body">
+          <h3>Royal Premium Box</h3>
+          <p>Badam • Kaju • Pista • Walnuts</p>
         </div>
       </div>
     </div>
@@ -245,33 +288,36 @@ footer a{color:#e8c98a;text-decoration:none}
 <!-- BENEFITS -->
 <section id="benefits">
   <div class="container">
-    <div class="title">Why MeraPopi?</div>
+    <div class="title">Why Choose MeraPopi?</div>
     <div class="benefits">
       <div class="benefit"><h3>Premium Quality</h3><p>Only export-grade dry fruits</p></div>
-      <div class="benefit"><h3>Hygienic Packing</h3><p>Fresh sealed & safe</p></div>
-      <div class="benefit"><h3>Pan-India Delivery</h3><p>Fast & reliable shipping</p></div>
-      <div class="benefit"><h3>Luxury Gifting</h3><p>Elegant festive hampers</p></div>
+      <div class="benefit"><h3>Hygienic Packing</h3><p>Fresh sealed packaging</p></div>
+      <div class="benefit"><h3>Pan India Delivery</h3><p>Fast & safe shipping</p></div>
+      <div class="benefit"><h3>Trusted Brand</h3><p>Loved by customers</p></div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer id="contact">
   <div class="footer">
     <div>
       <h3>MeraPopi Dry Fruits</h3>
-      <p>Luxury dry fruits for a healthier lifestyle.</p>
+      <p>Premium dry fruits for healthy lifestyle.</p>
     </div>
     <div>
-      <a href="#">About Us</a><br>
-      <a href="#">Privacy Policy</a><br>
+      <h3>Quick Links</h3>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
       <a href="#">Refund Policy</a>
     </div>
     <div>
+      <h3>Contact</h3>
       <p>📍 India</p>
-      <p>📞 Order on WhatsApp</p>
+      <p>📞 WhatsApp Order</p>
     </div>
   </div>
-  <div class="copy">© 2026 MeraPopi Dry Fruits</div>
+  <div class="copy">© 2026 MeraPopi Dry Fruits. All Rights Reserved.</div>
 </footer>
 
 <script>
@@ -281,7 +327,7 @@ setInterval(()=>{
   slides[i].classList.remove("active");
   i=(i+1)%slides.length;
   slides[i].classList.add("active");
-},4000);
+},4500);
 </script>
 
 </body>
