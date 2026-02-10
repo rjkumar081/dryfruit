@@ -1,172 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MeraPopi Dry Fruits | Premium Dry Fruits</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-  background:#fbf7f2;
-  color:#3b2a1a;
-}
-
-/* ===== HEADER ===== */
-header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:#fff;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);
-}
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:16px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  font-size:26px;
-  font-weight:800;
-}
-.logo span{color:#c9a45c}
-
-/* ===== SLIDER ===== */
-.slider{
-  position:relative;
-  width:100%;
-  height:80vh;
-  overflow:hidden;
-}
-
-.slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-  opacity:1;
-}
-
-.slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-}
-
-.content{
-  position:absolute;
-  top:50%;
-  left:8%;
-  transform:translateY(-50%);
-  color:#fff;
-  max-width:600px;
-  z-index:2;
-}
-
-.content h1{
-  font-size:52px;
-  margin-bottom:10px;
-}
-
-.content p{
-  font-size:18px;
-  margin-bottom:22px;
-}
-
-.content a{
-  display:inline-block;
-  background:#c9a45c;
-  color:#fff;
-  padding:14px 34px;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .content{
-    left:5%;
-    right:5%;
-    text-align:center;
-  }
-  .content h1{font-size:34px;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Dry Fruits</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo">Mera<span>Popi</span> Dry Fruits</div>
+<!-- HEADER -->
+<header class="header">
+  <div class="overlay">
+    <h1 class="logo">Royal Dry Fruits</h1>
+    <p class="tagline">Premium | Fresh | Healthy</p>
+    <a href="#products" class="btn">Explore Products</a>
   </div>
 </header>
 
-<!-- ===== SLIDER ===== -->
-<section class="slider">
-
-  <div class="slide active">
-    <img src="https://images.unsplash.com/photo-1622445272460-6d7a7d89f480?auto=format&fit=crop&w=1600&q=80">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Premium Almonds & Cashews</h1>
-      <p>Handpicked dry fruits for daily health</p>
-      <a href="#">Shop Now</a>
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="https://images.unsplash.com/photo-1604908177225-4c8f8c88a5a5?auto=format&fit=crop&w=1600&q=80">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Pure & Hygienic Dry Fruits</h1>
-      <p>Fresh packing • Premium quality</p>
-      <a href="#">Explore</a>
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=1600&q=80">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Luxury Gift Hampers</h1>
-      <p>Perfect for Diwali & celebrations</p>
-      <a href="#">View Hampers</a>
-    </div>
-  </div>
-
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Our Dry Fruits</h2>
+  <p>
+    Royal Dry Fruits provides hand-picked premium quality almonds, cashews,
+    walnuts, pistachios, raisins and more. Our dry fruits are 100% natural,
+    hygienically packed, and sourced from trusted farms.
+  </p>
 </section>
 
-<script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Premium Products</h2>
 
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 4000);
-</script>
+  <div class="product-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908554033-93b1f6c84d63" />
+      <h3>Almonds</h3>
+      <p>Rich in protein, vitamin E and antioxidants.</p>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615486364189-1e06e4c1bfcf" />
+      <h3>Cashews</h3>
+      <p>Creamy, delicious and full of healthy fats.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1610629336230-2a7b7870a16c" />
+      <h3>Walnuts</h3>
+      <p>Boost brain health and heart wellness.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46e2" />
+      <h3>Pistachios</h3>
+      <p>Crunchy taste with powerful nutrition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>✔ Premium Quality Dry Fruits</li>
+    <li>✔ Fresh & Hygienic Packaging</li>
+    <li>✔ Affordable Prices</li>
+    <li>✔ Trusted by Thousands</li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Royal Dry Fruits</h3>
+    <p>Healthy Lifestyle Starts With Us</p>
+    <p>📞 +91 90000 00000</p>
+    <p>📧 info@royaldryfruits.com</p>
+  </div>
+  <div class="copyright">
+    © 2026 Royal Dry Fruits | All Rights Reserved
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
